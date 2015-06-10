@@ -1,0 +1,44 @@
+@import url(variables.less);
+.slider-front {
+  margin-bottom: 50px;
+	.carousel-inner {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #726872;
+			opacity: 0.3;
+			transition: opacity ease-out 0.3s;
+		}
+	}
+	/* hide controls */
+	.carousel-control {
+		display: none;
+	}
+	/* overlay slide */
+	&:hover .carousel-inner:after {
+		opacity: 0;
+	}
+	.carousel-indicators {
+	  margin: 0;
+	  width: 100%;
+	  left: 0;
+	  bottom: 0;
+	  top: 100%;
+		padding: 10px 0 0;
+		height: 30px;
+	  li {
+	  	background: @base;
+	  	border: 0;
+	  	width: 7px;
+	  	height: 7px;
+	  	margin: 0 11px;
+	  	&.active {
+	  		background: @gray;
+	  	}
+	  }
+	}
+}

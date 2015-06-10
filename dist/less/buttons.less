@@ -1,0 +1,26 @@
+@import url(variables.less);
+
+@btn-color: @primary;
+
+/* Primary */
+.btn {
+	background: @btn-color;
+	border-radius: 0;
+	border: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 9px;
+	text-transform: uppercase;
+	padding: 14px 17px;
+	transition: background ease-out 0.2s;
+}
+
+.btn:focus {
+	background: @btn-color;
+}
+.btn:hover {
+	background: lighten(@btn-color, 10%);
+}
+
+.btn:active {
+	background: lighten(@btn-color, 20%);
+}

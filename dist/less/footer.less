@@ -1,0 +1,56 @@
+.footer {
+	background: #fff;
+	padding: 55px 0 110px 0;
+	.copyright {
+		font-size: 10px;
+		font-family: 'Ubuntu', sans-serif;
+		color: #9c999c;
+		line-height: 42px;
+	}
+	.soc-link {
+		float: right;
+		.fa {
+			color: #616161;
+			font-size: 14px;
+			border: solid 1px #616161;
+			border-radius: 50%;
+			padding: 10px;
+			width: 42px;
+			text-align: center;
+			height: 42px;
+			line-height: 21px;
+			margin-left: 11px;
+			transition: all ease-out 0.2s	;
+			&:hover {
+				background: #2b2c2d;
+				color: #fff;
+			}
+		}
+		.arrow-top {
+			position: absolute;
+			right: -80px;
+			top: 0;
+			.fa {
+				font-size: 22px;
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 40px 60px;
+		text-align: center;
+		.soc-link {
+			padding: 0;
+			float: none;
+		}
+	}
+	@media (max-width: 1400px) {
+		.soc-link {
+			.arrow-top {
+				position: static;
+				.fa {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

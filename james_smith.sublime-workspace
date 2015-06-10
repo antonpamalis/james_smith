@@ -1,0 +1,895 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"btn",
+				"btn-color"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ta",
+				"table-cell"
+			],
+			[
+				"pro",
+				"product-info"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"ul",
+				"ul"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"titl",
+				"titleSelect"
+			],
+			[
+				"ac",
+				"active"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"a",
+				"accordion"
+			],
+			[
+				"root",
+				"gupnp_root_device_new"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ev",
+				"ev"
+			],
+			[
+				"field",
+				"field"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"input",
+				"input_1"
+			],
+			[
+				"elem",
+				"elem"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"el",
+				"el"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"n",
+				"newArr"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"mess",
+				"mess"
+			],
+			[
+				"me",
+				"message"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "dist/less/main.less",
+			"settings":
+			{
+				"buffer_size": 234,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/less/nav-main.less",
+			"settings":
+			{
+				"buffer_size": 1330,
+				"line_ending": "Unix",
+				"name": ".nav-main {"
+			}
+		},
+		{
+			"file": "dist/less/buttons.less",
+			"settings":
+			{
+				"buffer_size": 423,
+				"line_ending": "Unix",
+				"name": ".btn {"
+			}
+		},
+		{
+			"file": "build/index.html",
+			"settings":
+			{
+				"buffer_size": 10298,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/less/articles-front.less",
+			"settings":
+			{
+				"buffer_size": 299,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/less/variables.less",
+			"settings":
+			{
+				"buffer_size": 133,
+				"line_ending": "Unix",
+				"name": "/* ================"
+			}
+		},
+		{
+			"contents": "var gulp = require('gulp'),\n	wiredep = require('wiredep').stream,\n    useref = require('gulp-useref'),\n    gulpif = require('gulp-if'),\n    uglify = require('gulp-uglify'),\n    minifyCss = require('gulp-minify-css'),\n	sftp = require('gulp-sftp'),\n	clean = require('gulp-clean'),\n	connect = require('gulp-connect'),\n	livereload = require('gulp-livereload'),\n	less = require('gulp-less'),\n	path = require('path'),\n	browserSync = require('browser-sync'),\n	reload = browserSync.reload;\n\n// Compile less into CSS & auto-inject into browsers\ngulp.task('less', function() {\n    return gulp.src(\"dist/less/*.less\")\n    .pipe(less({\n          paths: [ path.join(__dirname, 'less', 'includes') ]\n        }))\n        .pipe(gulp.dest(\"build/css\"));\n});\n\ngulp.task('less-watch', ['less'], browserSync.reload);\n\n// Static Server + watching less/html files\ngulp.task('server', ['less'], function() {\n\n    browserSync.init({\n        server: \"./build\"\n    });\n\n    gulp.watch(\"dist/less/*.less\", ['less-watch']);\n});\n\n// Bower\ngulp.task('bower', function () {\n  gulp.src('./build/index.html')\n    .pipe(wiredep({\n    	directory : \"build/libs\"\n    }))\n    .pipe(gulp.dest('./build'));\n});\n\ngulp.task('autoprefixer', function() {\n  return gulp.src('bourbon/style.css')\n  .pipe(prefix([\"last 5 version\", \"ie 8\", \"ie 7\"]))\n  .pipe(gulp.dest('www/style/'));\n});\n\n// Clean\ngulp.task('clean', function() {\n	return gulp.src('dist', {read: false})\n		.pipe(clean());\n})\n\n\ngulp.task(\"default\", ['server']);",
+			"file": "gulpfile.js",
+			"file_size": 1309,
+			"file_write_time": 1433817163000000,
+			"settings":
+			{
+				"buffer_size": 1478,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/antonpamalis/projects/arxip/gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 5429,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"PAc",
+				"Package Control: Install Package"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Set Syntax: CSS"
+			],
+			[
+				"Packages",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/antonpamalis/projects/event/gulpfile.js",
+		"/home/antonpamalis/projects/james_smith/gulpfile.js",
+		"/home/antonpamalis/projects/james_smith/dist/less/slider-front.less",
+		"/home/antonpamalis/projects/james_smith/dist/less/main.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/style.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/project/header.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/base/buttons.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/base/navigation.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/base/layout.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/base/elements.less",
+		"/home/antonpamalis/projects/church/sites/all/themes/bootstrap/bootstrap_subtheme/less/base/base.less",
+		"/home/antonpamalis/Install/Framevorks/initializr/index.html",
+		"/home/antonpamalis/projects/event/app/index.html",
+		"/home/antonpamalis/Install/Framevorks/initializr/browserconfig.xml",
+		"/home/antonpamalis/Install/Framevorks/initializr/.htaccess",
+		"/home/antonpamalis/Install/Framevorks/initializr/js/vendor/npm.js",
+		"/home/antonpamalis/projects/event/dist/index.html",
+		"/home/antonpamalis/projects/james_smith/.bowerrc",
+		"/home/antonpamalis/projects/event/dist/js/vendor.js",
+		"/home/antonpamalis/projects/opencart/gulpfile.js",
+		"/home/antonpamalis/projects/james_smith/index.html",
+		"/home/antonpamalis/projects/opencart/index.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/product/product.tpl",
+		"/home/antonpamalis/projects/opencart/system/library/agoo/response.php",
+		"/home/antonpamalis/projects/opencart/.gitignore",
+		"/home/antonpamalis/projects/opencart/.htaccess",
+		"/home/antonpamalis/projects/opencart/system/modification/catalog/view/theme/devohome/template/common/header.tpl",
+		"/home/antonpamalis/Install/Opencart/Modules/seocmspro2/catalog/view/theme/default/template/agootemplates/widgets/reviews/reviews_adaptive.tpl",
+		"/home/antonpamalis/Install/Opencart/Modules/seocmspro2/catalog/view/theme/default/template/agootemplates/widgets/html/html.tpl",
+		"/home/antonpamalis/Install/Opencart/Modules/seocmspro2/system/library/bbcode/examples/1-GettingStarted.php",
+		"/home/antonpamalis/Install/Opencart/Modules/seocmspro2/system/library/iblog.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/common/header.tpl",
+		"/home/antonpamalis/projects/opencart/_index.php",
+		"/home/antonpamalis/projects/opencart/admin/index.php",
+		"/home/antonpamalis/Install/Opencart/Opencart/upload-2020-rs2/admin/index.php",
+		"/tmp/fz3temp-1/config 2.php",
+		"/home/antonpamalis/projects/opencart/catalog/controller/information/contact.php",
+		"/home/antonpamalis/projects/opencart/admin/controller/setting/setting.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/information/contact.tpl",
+		"/tmp/fz3temp-1/error.log",
+		"/tmp/fz3temp-1/config.php",
+		"/home/antonpamalis/Рабочий стол/Works/DevoeHome/backups/2015-06-05/opencart/config.php",
+		"/home/antonpamalis/Рабочий стол/Works/DevoeHome/backups/2015-05-29/config.php",
+		"/home/antonpamalis/Рабочий стол/Works/DevoeHome/backups/2015-05-11/config.php",
+		"/home/antonpamalis/Рабочий стол/Works/DevoeHome/backups/12015-04-19/opencart/config.php",
+		"/home/antonpamalis/projects/opencart/admin/view/template/setting/setting.tpl",
+		"/home/antonpamalis/projects/opencart/admin/controller/catalog/blog.php",
+		"/home/antonpamalis/projects/opencart/admin/controller/catalog/record.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/stylesheet/simple.css",
+		"/home/antonpamalis/projects/opencart/system/logs/error.log",
+		"/tmp/fz3temp-1/simple_row_field.tpl",
+		"/tmp/fz3temp-1/common.js",
+		"/tmp/fz3temp-1/simple_row_header.tpl",
+		"/tmp/fz3temp-1/contact.tpl",
+		"/tmp/fz3temp-1/index.html",
+		"/home/antonpamalis/projects/opencart/catalog/model/localisation/country.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/module/slideshow.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/language/russian/checkout/success.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/default/template/common/success.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/default/template/checkout/d_quickcheckout.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/common/success.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/language/russian/payment/bank_transfer.php",
+		"/home/antonpamalis/projects/opencart/.git/config",
+		"/home/antonpamalis/.git/config",
+		"/tmp/fz3temp-1/style.less",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/checkout/confirm.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/model/payment/bank_transfer.php",
+		"/tmp/fz3temp-1/config 4.php",
+		"/tmp/fz3temp-1/config 3.php",
+		"/tmp/fz3temp-1/id_rsa.pub",
+		"/tmp/fz3temp-1/bank_transfer.tpl",
+		"/tmp/fz3temp-1/bank_transfer 2.php",
+		"/tmp/fz3temp-1/simple.css",
+		"/tmp/fz3temp-1/.gitignore",
+		"/home/antonpamalis/Install/Opencart/Lang Country and zone/countries_zones_multilang_v1521.xml",
+		"/home/antonpamalis/Install/Opencart/Lang Country and zone/zone.php",
+		"/tmp/fz3temp-1/bank_transfer.php",
+		"/tmp/fz3temp-1/simplecheckout_cart.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/common/simple_header.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/controller/payment/bank_transfer.php",
+		"/tmp/fz3temp-1/default.php",
+		"/home/antonpamalis/projects/opencart/catalog/language/russian/checkout/cart.php",
+		"/home/antonpamalis/projects/opencart/catalog/language/russian/checkout/simplecheckout.php",
+		"/tmp/fz3temp-1/cart.tpl",
+		"/home/antonpamalis/Install/Opencart/Modules/simple 4.3.19/styles for opencart 2.0/template/common/simple_header.tpl",
+		"/tmp/fz3temp-1/content.less",
+		"/tmp/fz3temp-1/simplecheckout.php",
+		"/tmp/fz3temp-1/checkout.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/checkout/simplecheckout_cart.tpl",
+		"/tmp/fz3temp-1/checkout.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/payment/bank_transfer.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/checkout/cart.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/controller/checkout/checkout.php",
+		"/home/antonpamalis/projects/opencart/admin/controller/module/cz_translator.php",
+		"/tmp/fz3temp-1/simple_header.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/common/simple_row_header.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/controller/checkout/simplecheckout_cart.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/common/home.tpl",
+		"/tmp/fz3temp-1/simplecheckout.tpl",
+		"/home/antonpamalis/projects/opencart/admin/controller/catalog/category.php",
+		"/home/antonpamalis/projects/opencart/catalog/controller/product/category.php",
+		"/tmp/fz3temp-1/category.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/module/featured.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/controller/module/featured.php",
+		"/tmp/fz3temp-1/featured.php",
+		"/home/antonpamalis/Install/Opencart/Modules/Paladin SEO PRO 4.7/Paladin SEO Manager v4.7.0 - OpenCart-2.x.x/readme.url",
+		"/home/antonpamalis/projects/opencart/.gitignore.swo",
+		"/home/antonpamalis/Install/Opencart/Lang Country and zone/4_tables_in_db.sql",
+		"/var/tmp/kdecache-antonpamalis/krun/19747_0_4_tables_in_db.sql",
+		"/home/antonpamalis/Рабочий стол/Works/DevoeHome/backups/12015-04-19/opencart/admin/config.php",
+		"/home/antonpamalis/projects/opencart/admin/config.php",
+		"/home/antonpamalis/projects/opencart/config.php",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/stylesheet/stylesheet.css",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/checkout/reward.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/common/footer.tpl",
+		"/home/antonpamalis/projects/opencart/catalog/view/theme/devohome/template/checkout/checkout.tpl",
+		"/tmp/fz3temp-1/flat.php",
+		"/tmp/fz3temp-1/free.php",
+		"/tmp/fz3temp-1/cheque.php",
+		"/tmp/fz3temp-1/success.php",
+		"/tmp/fz3temp-1/simplecheckout_customer.tpl",
+		"/tmp/fz3temp-1/chedule.less",
+		"/tmp/fz3temp-1/header.less",
+		"/tmp/fz3temp-1/simplecheckout_payment_address.tpl",
+		"/tmp/fz3temp-1/simplecheckout_login.tpl",
+		"/home/antonpamalis/projects/opencart2/admin/controller/extension/installer.php",
+		"/home/antonpamalis/projects/opencart2/catalog/view/theme/devohome/template/checkout/checkout.tpl",
+		"/home/antonpamalis/projects/opencart2/config.php"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"carousel-example-generic",
+			"Project name",
+			"description",
+			"content-records",
+			"name",
+			"blog-category-list",
+			"artcl",
+			"artc",
+			"blog-image",
+			"li:first-child",
+			"9",
+			"category-list",
+			"owl",
+			"Купить",
+			"купить",
+			"VQMOD",
+			"present",
+			"comment",
+			"text_comment",
+			"prisentation",
+			"config_comment",
+			"/home/u2677s9619/domains/u2677s9619.test",
+			"checkout-simplecheckout",
+			"simple",
+			"simplecheckout_for",
+			"packSizeLimit",
+			"email;",
+			"comment",
+			"tele",
+			"применить",
+			"Ваше имя",
+			"Связаться с нами",
+			"captcha",
+			"validate()",
+			"text-wrap",
+			"simplecheckout-table-form-left",
+			"Заказ не будет обработан, пока деньги не поступят на наш расчетный счёт.",
+			"fa-home",
+			"devohome.com.ua/devohome.com.ua",
+			"/a/antonp5c/antonp5c.bget.ru",
+			"/a/antonp5c",
+			"antonp5c.bget.ru",
+			"		if ($status) {",
+			".remove",
+			"remove",
+			"quantity",
+			"wrap-quantity-and-total",
+			"breadcrumb",
+			"Подтверждение заказа",
+			"bank_transfer",
+			"Заказ не будет обработан, пока деньги не поступят на наш расчетный счёт",
+			"cart-total",
+			"class=\"shopping-cart\"",
+			"id=\"cart\"",
+			"id=\"cart-total\"",
+			"clear",
+			"p.sort_order&order=ASC",
+			"sort",
+			"head",
+			"HEAD",
+			"Ваш заказ успешно создан!",
+			"Оплата наличными",
+			"Бесплатная доставка",
+			"Доставка с фиксированной стоимостью доставки",
+			"btn btn-primary",
+			"chedule",
+			"#block-views-chedule-block",
+			"total",
+			"simplecheckout-left-column",
+			"buttons",
+			"input",
+			"total",
+			"simplecheckout_cart",
+			"Покупатель",
+			".node-type-news .node-type-news ",
+			".node-type-news {*.} .node-type-news ",
+			".node-type-news {*.}.node-type-news ",
+			".node-type-news .node-type-news ",
+			".node-type-news #block-views-news-block-3",
+			"content",
+			"\">   111",
+			"\"> 111",
+			"\"> ",
+			"Searching",
+			"\">\n  111",
+			"<div class=\"container\">\n  111",
+			"  111",
+			"111",
+			"111 ",
+			"111",
+			"minus",
+			"242816f50f6d2b0020102ae1eddea927",
+			"%20",
+			"ubench.php",
+			"Ubench.php",
+			"opencart",
+			"url",
+			"if (!in_array($destination, $list))",
+			"/home/antonpamalis/projects/opencart/",
+			"opencart/",
+			"/home/antonpamalis/projects",
+			"vouchers",
+			"option",
+			".page-taxonomy-term-34 #block-views-products-block-1",
+			"REQUEST_METHOD",
+			"this->",
+			"body[class*=\"product-\"]",
+			"body[class*=\"product-\"] #gallery_01 li img",
+			"opencart",
+			"/home/antonpamalis/projects/opencart",
+			"#gallery_01",
+			"#top",
+			".btn",
+			"review",
+			"price",
+			"product",
+			"#product",
+			"select",
+			"PT+Sans",
+			"produ",
+			"how",
+			"price",
+			"container",
+			"Возможно вас заинтересуют следующие товары",
+			"input",
+			"input-quantity",
+			"entry_qty",
+			"$entry_qty"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"carousel-front",
+			"James Smith",
+			"content-records row-records",
+			"news",
+			"/home/a/antonp5c/antonp5c.bget.ru",
+			"class-checkout-simplecheckout",
+			"devohome.com.ua",
+			"/t/toshikax/devohome.com.ua",
+			"devohome.com.ua",
+			"opencart3",
+			"opencart4",
+			"/home/a/antonp5c/antonp5c.bget.ru/public_html/",
+			"",
+			"/home/a/antonp5c/antonp5c.bget.ru/public_html",
+			"",
+			"opencart2",
+			"/home/u2677s9619/domains/u2677s9619.test/public_html",
+			"/home/u2677s9619/domains/u2677s9619.test.hn3.justhost.ru",
+			"ul",
+			"custom-slider-title",
+			"custom-slider",
+			"title",
+			"@",
+			"8",
+			"0",
+			"+",
+			"^",
+			"all",
+			"colorLine",
+			"",
+			"/*font-family: 'Jura', Arial, sans-serif;*/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "dist/less/main.less",
+					"settings":
+					{
+						"buffer_size": 234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								234,
+								234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "dist/less/nav-main.less",
+					"settings":
+					{
+						"buffer_size": 1330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								886,
+								886
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".nav-main {",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dist/less/buttons.less",
+					"settings":
+					{
+						"buffer_size": 423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".btn {",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "build/index.html",
+					"settings":
+					{
+						"buffer_size": 10298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4344,
+								4344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1118.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "dist/less/articles-front.less",
+					"settings":
+					{
+						"buffer_size": 299,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "dist/less/variables.less",
+					"settings":
+					{
+						"buffer_size": 133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/* ================",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "gulpfile.js",
+					"settings":
+					{
+						"buffer_size": 1478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								741,
+								741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/antonpamalis/projects/arxip/gulpfile.js",
+					"settings":
+					{
+						"buffer_size": 5429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4858,
+								4858
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2573.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"catalog/view/theme/devohome/template/product/product.tpl"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/antonpamalis/projects/opencart/opencart.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true
+}
