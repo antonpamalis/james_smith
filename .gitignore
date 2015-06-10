@@ -1,4 +1,8 @@
 node_modules/
+<<<<<<< HEAD
 node_modules/**/*
 james_smith.sublime-project
 james_smith.sublime-workspace
+=======
+node_modules/**/*
+>>>>>>> c6845e20a510e15354dfdcf70023296a98914b5e
