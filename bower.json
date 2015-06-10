@@ -1,0 +1,23 @@
+{
+  "name": "james_smith",
+  "version": "0.0.0",
+  "authors": [
+    "antonpamalis <antonpamalis@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "modernizr": "~2.8.3",
+    "normalize": "~1.0.4",
+    "fontawesome": "~4.3.0"
+  }
+}
