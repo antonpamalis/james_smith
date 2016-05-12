@@ -62,7 +62,7 @@ gulp.task('server', ['less'], function() {
 // Clean
 gulp.task('clean', function() {
 	return gulp.src('dist', {read: false})
-		.pipe(clean());
+	.pipe(clean());
 })
 
 gulp.task("default", ['server']);
